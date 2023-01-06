@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap');
+
+:root {
+    --Red: hsl(0, 100%, 66%);
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    background-image: url('./images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+/*Front card*/
+.card-front{
+    display: flex;
+    flex-direction: column;
+    background-image: url('./images/bg-card-front.png');
+    background-repeat: no-repeat;
+    height:245px;
+    width: 447px;
+    margin-bottom: 2.5em;
+}
+
+.front-icons{
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;   
+}
+
+.lg-circle{
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 25px;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+.sm-circle{
+    height: 25px;
+    width: 25px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+    margin-top: 25px;
+}
+.front-num{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--White);
+    margin-left: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.front-info{
+    display: flex;
+    text-align: center;
+    color: var(--White);
+    justify-content: space-between;
+    margin: 0px 30px 0 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exp-front{
+    display: flex;
+    letter-spacing: 2px;
+}
+
+/* card Back */
+.card-back{
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(./images/bg-card-back.png);
+    background-repeat: no-repeat;
+    height:245px;
+    width: 447px;
+    transform: translateX(6em);
+}
+
+.back-cvc{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: var(--White);
+    margin-right: 50px;
+    letter-spacing: 3px;
+}
+
+
+/* card form */
+
+.info--hidden {
+    height: 0 !important;
+}
+
+.form-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4em;
+
+}
+
+::placeholder {
+    color: var(--Light-grayish-violet);
+    font-weight: 500;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.holder-name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.card-number{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.card-details{
+    display: flex; 
+    width: 100%;
+    gap: 10px;
+}
+
+input {
+    padding: 13px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin-top: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-color: var(--Light-grayish-violet);
+}
+
+.cardForm input:hover{
+    border: 2px solid hsl(278, 94%, 30%);
+    border-radius: 10px;
+}
+
+
+.dates{
+    display: flex;
+    gap: 0.5em;
+}
+
+.dates input {
+    width: 30%;
+}
+
+.info {
+    font-size: 12px;
+    color: var(--Red);
+    margin: 1px;
+}
+
+.btn {
+    margin-top: 1em;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .card-front, 
+    .card-back {
+        transform: scale(0.90);
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+}
+
+@media screen and (max-width: 750px) {
+	.body {
+		flex-direction: column;
+	}
+
+	body::after {
+		background-image: url("./images/bg-main-mobile.png");
+		height: 40%;
+		width: 100%;
+	}
+
+}
