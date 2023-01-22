@@ -115,9 +115,7 @@ body {
 
 /* card form */
 
-.info--hidden {
-    height: 0 !important;
-}
+
 
 .form-section{
     display: flex;
@@ -165,6 +163,7 @@ input {
     border-color: var(--Light-grayish-violet);
 }
 
+
 .cardForm input:hover{
     border: 2px solid hsl(278, 94%, 30%);
     border-radius: 10px;
@@ -180,10 +179,12 @@ input {
     width: 30%;
 }
 
+
 .info {
     font-size: 12px;
     color: var(--Red);
     margin: 1px;
+    display: none;
 }
 
 .btn {
@@ -195,10 +196,23 @@ input {
     color: var(--White);
     font-size: 18px;
     font-weight: 500;
+    cursor: pointer;
 }
 
+.btn:active {
+    background-color: hsl(278, 68%, 20%);
+}
 
+/* Completed State */
+.completed-state{
+    display: none;
+    flex-direction: column;
+    max-width: 25rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4em;
 
+}
 @media screen and (max-width: 1440px) {
     .card-front, 
     .card-back {

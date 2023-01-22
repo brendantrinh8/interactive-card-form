@@ -26,11 +26,9 @@
                         <span class="front-yy" id="front-yy">00</span>
                     </div>
                 </div>
-
             </div>
             <div class="card-back">
                 <p class="back-cvc" id="back-cvc">000</p>
-
             </div>
 
         </section>
@@ -39,6 +37,7 @@
                 <div class="holder-name">
                     <label for="ccName">Cardholder Name</label>
                     <input type="text" id="ccName" name="cardName" placeholder="e.g. Jane Appleseed">
+                    <p class="info info--hidden " id="name-error">Can't be blank</p>
                 </div>
                 <div class="card-number">
                     <label for="ccNum">Card Number</label>
@@ -47,8 +46,9 @@
                         name="cardNumber" 
                         placeholder="e.g. 1234 5678 9123 0000"
                         maxlength="16"
-                   />
-                   <p class="info info--hidden">Wrong format, numbers only</p>
+                        inputmode="numeric"
+                    />
+                   <p class="info info--hidden" id="num-error">Wrong format, numbers only</p>
                 </div>
 
                 <div class="card-details">
@@ -57,6 +57,7 @@
                         <div class="dates">
                             <input 
                                 type="text"
+                                inputmode="numeric"
                                 id="expMM"
                                 placeholder="MM"
                                 maxlength="2"
@@ -66,23 +67,31 @@
                             <input 
                                 type="text"
                                 id="expYY"
+                                inputmode="numeric"
                                 placeholder="YY"
                                 maxlength="2"
                             >
                         </div>
-                        <p class="info info--hidden">Can't be blank</p>
+                        <p class="info info--hidden" id="exp-error">Can't be blank</p>
                     </div>
                     <div class="cvc-container">
                         <label for="cvcNum">CVC</label>
                         <div class="cvc">
-                            <input type="text" id="cvcNum" maxlength="4" placeholder="e.g. 123">
+                            <input type="text" id="cvcNum" maxlength="3" placeholder="e.g. 123">
                         </div>
-                        <p class="info info--hidden">Can't be blank</p>
+                        <p class="info info--hidden" id="cvc-error">Can't be blank</p>
                     </div>
                     
                 </div>
-                <button type="submit" class="btn">Confirm</button>
+                <button type="button" id="btn" class="btn">Confirm</button>
             </form>
+        </section>
+        
+        <section class="completed-state">
+            <img src="images/icon-complete.svg" alt="tick">
+            <h3>Thank You!</h3>
+            <p>We've added your card details</p>
+            <button type="button" class="btn" id="completeBtn">Complete</button>
 
         </section>
     </main>
